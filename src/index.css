@@ -1,0 +1,179 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CFO Helper Agent Design System - Professional Financial Dashboard */
+
+@layer base {
+  :root {
+    --background: 240 10% 98%;
+    --foreground: 222 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 4.9%;
+
+    --primary: 220 90% 25%;
+    --primary-foreground: 210 40% 98%;
+    --primary-glow: 220 90% 45%;
+
+    --secondary: 220 15% 96%;
+    --secondary-foreground: 220 90% 25%;
+
+    --success: 142 72% 29%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 72% 95%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+    --warning-light: 38 92% 95%;
+
+    --muted: 220 15% 96%;
+    --muted-foreground: 220 8.9% 46.1%;
+
+    --accent: 220 15% 96%;
+    --accent-foreground: 220 90% 25%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 220 90% 25%;
+
+    /* Financial Dashboard Specific Colors */
+    --chart-primary: 220 90% 45%;
+    --chart-secondary: 142 72% 45%;
+    --chart-tertiary: 38 92% 60%;
+    --chart-grid: 220 13% 94%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 90% 25%), hsl(220 90% 45%));
+    --gradient-success: linear-gradient(135deg, hsl(142 72% 29%), hsl(142 72% 45%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 15% 98%));
+    
+    /* Shadows */
+    --shadow-dashboard: 0 4px 20px -4px hsl(220 90% 25% / 0.1);
+    --shadow-card: 0 2px 12px -2px hsl(220 90% 25% / 0.05);
+    --shadow-elevation: 0 8px 32px -8px hsl(220 90% 25% / 0.15);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 84% 6%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 84% 6%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 220 90% 65%;
+    --primary-foreground: 222 84% 4.9%;
+    --primary-glow: 220 90% 75%;
+
+    --secondary: 217 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --success: 142 72% 45%;
+    --success-foreground: 222 84% 4.9%;
+    --success-light: 142 72% 15%;
+
+    --warning: 38 92% 60%;
+    --warning-foreground: 222 84% 4.9%;
+    --warning-light: 38 92% 15%;
+
+    --muted: 217 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 32.6% 17.5%;
+    --input: 217 32.6% 17.5%;
+    --ring: 220 90% 65%;
+
+    /* Dark mode financial colors */
+    --chart-primary: 220 90% 65%;
+    --chart-secondary: 142 72% 55%;
+    --chart-tertiary: 38 92% 70%;
+    --chart-grid: 217 32.6% 20%;
+    
+    /* Dark gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 90% 45%), hsl(220 90% 65%));
+    --gradient-success: linear-gradient(135deg, hsl(142 72% 35%), hsl(142 72% 55%));
+    --gradient-card: linear-gradient(145deg, hsl(222 84% 6%), hsl(217 32.6% 17.5%));
+    
+    /* Dark shadows */
+    --shadow-dashboard: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 2px 12px -2px hsl(0 0% 0% / 0.2);
+    --shadow-elevation: 0 8px 32px -8px hsl(0 0% 0% / 0.4);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-success {
+    background: var(--gradient-success);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-dashboard {
+    box-shadow: var(--shadow-dashboard);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-elevation {
+    box-shadow: var(--shadow-elevation);
+  }
+}
